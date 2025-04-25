@@ -1,4 +1,4 @@
-package com.hadirahimi.passwordgenerator
+package com.cyberlock.safepasspro
 
 import org.junit.Test
 

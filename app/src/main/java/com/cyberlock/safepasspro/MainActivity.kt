@@ -1,4 +1,4 @@
-package com.hadirahimi.passwordgenerator
+package com.cyberlock.safepasspro
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -6,19 +6,32 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.hadirahimi.passwordgenerator.databinding.ActivityMainBinding
+import com.cyberlock.safepasspro.databinding.ActivityMainBinding
+import com.yandex.mobile.ads.common.MobileAds
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity()
 {
     private lateinit var binding : ActivityMainBinding
+    private lateinit var appOpenAd: AppOpenAd
+    private lateinit var appOpenStickyOne: AppOpenStickyOne
+
     override fun onCreate(savedInstanceState : Bundle?)
     {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        
-        //initViews
+
+        MobileAds.initialize(this) {
+            println(">>> YandexAds initialize")
+        }
+
+        appOpenAd = AppOpenAd()
+        appOpenAd.initialize(this)
+
+        appOpenStickyOne = AppOpenStickyOne(this, binding.banner)
+        appOpenStickyOne.loadAd()
+
         binding.apply {
             generateButton.setOnClickListener {
                 val selectedOptions = mutableListOf<Char>()

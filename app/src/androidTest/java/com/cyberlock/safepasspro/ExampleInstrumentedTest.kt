@@ -1,4 +1,4 @@
-package com.hadirahimi.passwordgenerator
+package com.cyberlock.safepasspro
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

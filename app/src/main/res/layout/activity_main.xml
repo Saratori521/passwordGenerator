@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#66BB6A"
+    android:background="#151719"
     tools:context=".MainActivity">
 
     <com.google.android.material.card.MaterialCardView
@@ -28,7 +28,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/iran_sans_x_black"
                 android:gravity="center"
-                android:text="Password Generator"
+                android:text="Сгенерируй пароль"
                 android:textSize="25sp"
                 app:layout_constraintTop_toTopOf="parent"/>
 
@@ -39,7 +39,7 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="15dp"
                 android:gravity="center"
-                android:hint="password"
+                android:hint="пароль"
                 android:textSize="17sp"
                 android:fontFamily="@font/iran_sans_x_medium"
                 android:background="@drawable/border_design"
@@ -54,9 +54,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/iransans_x_num_bold"
-                android:text="Lowercase (a-z)"
+                android:text="Строчные буквы"
                 android:checked="true"
-                android:buttonTint="#66BB6A"
+                android:buttonTint="#4A60D7"
                 app:layout_constraintStart_toStartOf="@id/tvPassword"
                 app:layout_constraintTop_toBottomOf="@id/tvPassword"/>
 
@@ -66,8 +66,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/iransans_x_num_bold"
-                android:text="Numbers (0-9)"
-                android:buttonTint="#66BB6A"
+                android:text="Числа"
+                android:buttonTint="#4A60D7"
                 app:layout_constraintStart_toStartOf="@id/checkboxLowercase"
                 app:layout_constraintTop_toBottomOf="@id/checkboxLowercase"/>
 
@@ -76,8 +76,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/iransans_x_num_bold"
-                android:text="Uppercase (A-Z)"
-                android:buttonTint="#66BB6A"
+                android:text="Заглавные буквы"
+                android:buttonTint="#4A60D7"
                 app:layout_constraintEnd_toEndOf="@id/tvPassword"
                 app:layout_constraintStart_toEndOf="@id/checkboxLowercase"
                 app:layout_constraintTop_toTopOf="@id/checkboxLowercase"/>
@@ -88,8 +88,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/iransans_x_num_bold"
-                android:text="Symbols"
-                android:buttonTint="#66BB6A"
+                android:text="Символы"
+                android:buttonTint="#4A60D7"
                 app:layout_constraintStart_toStartOf="@id/checkboxUppercase"
                 app:layout_constraintTop_toBottomOf="@id/checkboxUppercase"/>
 
@@ -98,19 +98,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 app:cornerRadius="10dp"
-                android:text="Generate Password"
+                android:text="@string/generate_password"
                 android:fontFamily="@font/iran_sans_x_medium"
-                android:textSize="15sp"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginBottom="20dp"
                 android:layout_marginHorizontal="20dp"
-                android:backgroundTint="#00C853"
+                android:backgroundTint="#7196a6"
                 app:layout_constraintTop_toBottomOf="@id/checkboxSymbol"
                 android:layout_marginTop="20dp"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.yandex.mobile.ads.banner.BannerAdView
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>
 
